@@ -1,2 +1,3 @@
 const init = () => console.log('idukay init'); 
-export {init}
+
+export default init

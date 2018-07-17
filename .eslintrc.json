@@ -1,0 +1,35 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["plugin:import/warnings"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "globals": {
+    "fetch": true,
+    "jasmine": true,
+    "spyOn": true
+  },
+  "plugins": ["jest", "import"],
+  "rules": {
+    "indent": ["error", 2, { "MemberExpression": 0 }],
+    "comma-dangle": ["error", "never"],
+    "no-underscore-dangle":0,
+    "space-in-parens": ["error", "never"],
+    "object-curly-spacing": ["error", "never"],
+    "no-trailing-spaces": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": [2, "never", { "svg": "always", "jpg": "always", "png": "always" }],
+    "import/prefer-default-export": 1,
+    "lines-between-class-members": [1, "always"],
+    "padding-line-between-statements": ["warn", {"blankLine": "always", "prev": "*", "next": "export"}]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}
