@@ -1,0 +1,22 @@
+{
+  "name": "idukay-js-sdk",
+  "version": "1.0.0",
+  "description": "Used to integrate apps with Idukay",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levelap-dev/idukay-js-sdk.git"
+  },
+  "keywords": [
+    "idukay"
+  ],
+  "author": "Idukay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levelap-dev/idukay-js-sdk/issues"
+  },
+  "homepage": "https://github.com/levelap-dev/idukay-js-sdk#readme"
+}
