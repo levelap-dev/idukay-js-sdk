@@ -1,3 +1,3 @@
-import * as Login from 'Login/Login';
+import * as Login from 'src/Login/Login';
 
 export {Login};

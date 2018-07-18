@@ -1,4 +1,4 @@
-import * as Login from 'Login/Login';
+import * as Login from '../Login';
 import fs from 'fs';
 
 let write;
