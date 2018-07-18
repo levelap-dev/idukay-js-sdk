@@ -22,8 +22,7 @@
   "homepage": "https://github.com/levelap-dev/idukay-js-sdk#readme",
   "dependencies": {
     "babel-plugin-module-resolver": "^3.1.1",
-    "ejs": "^2.6.1",
-    "fs": "0.0.1-security"
+    "ejs": "^2.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
