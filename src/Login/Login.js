@@ -1,9 +1,7 @@
-import {readFileSync} from 'fs';
-
 const openPopUp = () => {
-  const html = readFileSync(`${__dirname}/views/login.html`);
+  const html = '<div></div>';
   const popUp = window.open('','Login', 'width=200, height=100');
-  popUp.document.write(html.toString());
+  popUp.document.write(html);
   
 };
 
