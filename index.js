@@ -1,3 +1,3 @@
-import Login from 'Login';
+require('babel-core/register')();
 
-export default Login
+require('./src/index.js');
