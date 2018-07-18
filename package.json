@@ -1,6 +1,6 @@
 {
   "name": "idukay-js-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Used to integrate apps with Idukay",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,11 @@
     "url": "https://github.com/levelap-dev/idukay-js-sdk/issues"
   },
   "homepage": "https://github.com/levelap-dev/idukay-js-sdk#readme",
+  "dependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "ejs": "^2.6.1",
+    "fs": "0.0.1-security"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
@@ -31,9 +36,5 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jest": "^21.17.0",
     "jest": "^23.4.1"
-  },
-  "dependencies": {
-    "babel-plugin-module-resolver": "^3.1.1",
-    "ejs": "^2.6.1"
   }
 }
