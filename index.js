@@ -1,3 +1,3 @@
-const init = () => console.log('idukay init'); 
+import Login from 'Login';
 
-export default init
+export default Login
