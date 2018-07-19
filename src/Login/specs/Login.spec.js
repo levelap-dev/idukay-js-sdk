@@ -1,4 +1,4 @@
-import * as Login from '../Login';
+import * as Login from 'Login/Login';
 
 let write;
 describe('When login', () => {
