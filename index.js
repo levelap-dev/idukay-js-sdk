@@ -1,3 +1,1 @@
-require('babel-core/register')();
-
-module.exports = require('./src/index.js');
+module.exports = require('./lib/index.js');
