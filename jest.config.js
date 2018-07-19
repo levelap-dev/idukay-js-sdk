@@ -1,5 +1,5 @@
 module.exports = {
-  presets: ['es2015'],
+  presets: ['env'],
   testMatch: [
     '**/**/specs/*spec.js?(x)'
   ],
