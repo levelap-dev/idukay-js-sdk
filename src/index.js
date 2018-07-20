@@ -1,3 +1,3 @@
-import * as Login from 'Login/Login';
+import login from 'idukay/login';
 
-export {Login};
+export default {login};

@@ -5,5 +5,9 @@ module.exports = {
   testPathIgnorePatterns: [
     '/node_modules/'
   ],
-  coveragePathIgnorePatterns: []
+  coveragePathIgnorePatterns: [],
+  automock: false,
+  setupFiles: [
+    './jestSetup.js'
+  ]
 };
