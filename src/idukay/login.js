@@ -4,8 +4,9 @@ let password;
 const createPost = async () => {
   email = popUp.document.getElementById("email").value;
   password = popUp.document.getElementById("password").value;
-  const user = await fetch('http://dev.idukay.net/login', {
+  const user = await fetch('http://192.168.100.239:3000/login', {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
