@@ -4,7 +4,7 @@ let password;
 const createPost = async () => {
   email = popUp.document.getElementById("email").value;
   password = popUp.document.getElementById("password").value;
-  const user = await fetch('http://192.168.100.239:3000/login', {
+  const user = await fetch('http://dev.idukay.net/login', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
