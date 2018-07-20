@@ -1,19 +1,21 @@
 let popUp;
 let email;
 let password;
+
 const createPost = async () => {
   email = popUp.document.getElementById("email").value;
   password = popUp.document.getElementById("password").value;
+
   const user = await fetch('http://dev.idukay.net/login', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded',
       'ClientVersion': '0.9.19'
     },
     credentials: 'same-origin',
-    body: JSON.stringify({email, password})
+    body: `email=${email}&password=${password}`
   });
 
   return user;
