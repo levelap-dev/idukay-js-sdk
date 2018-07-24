@@ -1,29 +1,33 @@
 let popUp;
 let email;
 let password;
+let promise;
 
 const createPost = async () => {
   email = popUp.document.getElementById("email").value;
   password = popUp.document.getElementById("password").value;
 
-  const user = await fetch('http://dev.idukay.net/login', {
+  let response = await fetch('http://localhost:3001/login', {
     method: 'POST',
-    mode: 'no-cors',
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'ClientVersion': '0.9.19'
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    credentials: 'same-origin',
     body: `email=${email}&password=${password}`
   });
 
-  return user;
-  
+  console.log('JSON:::',response.json());
+  promise = response.json();
+};
+
+
+const getLoggedUser = () => {
+  promise.then((resp) => {
+    console.log('getLogged::',resp);
+  });
 };
 
 const login = () => {
-  
+
   const html = '<div>'+
   '<form>'+
   '<div>'+
@@ -47,5 +51,7 @@ const login = () => {
 };
 
 export {createPost};
+
+const idukay = {login, getLoggedUser};
 
 export default login;
