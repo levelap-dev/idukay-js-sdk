@@ -1,3 +1,3 @@
-import login from 'idukay/login';
+import idukay from 'idukay/login';
 
-export default {login};
+export default idukay;

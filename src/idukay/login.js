@@ -54,4 +54,4 @@ export {createPost};
 
 const idukay = {login, getLoggedUser};
 
-export default login;
+export default idukay;
