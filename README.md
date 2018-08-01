@@ -9,7 +9,7 @@ Used to integrate apps with Idukay
 `import idukay from 'idukay-js-sdk';`
 
 ### ES5
-`var idukay = `require('idukay-js-sdk');`
+`var idukay = require('idukay-js-sdk');`
 
 # for login
 `idukay.login() //render pop up;`
