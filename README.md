@@ -12,7 +12,7 @@ Used to integrate apps with Idukay
 `var idukay = require('idukay-js-sdk');`
 
 # for login
-`idukay.login() //render pop up;`
+`idukay.login({}, callback) //render pop up;`
 
 # get user logged
 `idukay.isUserLogged(); //return true if logged in.`
