@@ -18,16 +18,16 @@ Used to integrate apps with Idukay
 `idukay.isUserLogged(); //return true if logged in.`
 
 # example on es6
-loginIdukay = () => {
-    idukay.login({}, function(error, response) {
+``` 
+ loginIdukay = () => {
+     idukay.login({}, function(error, response) {
+       if (error) {
+        console.log(error);
+       }
 
-      if (error) {
-        console.log('error: ', error);
-      }
-
-      if (response) {
-        console.log('login',user);
-      }
-
-    });
-  };
+       if (response) {
+        console.log(user);
+       }
+     });
+ };
+```
