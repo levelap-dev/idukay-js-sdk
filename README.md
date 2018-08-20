@@ -30,7 +30,7 @@ Used to integrate apps with Idukay
        }
      });
  };
-``
+```
 
 ### If you don't have require (es5 or es6)
 ```
