@@ -1,6 +1,6 @@
 {
   "name": "idukay-js-sdk",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Used to integrate apps with Idukay",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,9 @@
 import idukay from 'idukay/login';
-window.idukay = idukay;
+
+const isBrowser = typeof window !== 'undefined'
+
+if (isBrowser) {
+  window.idukay = idukay;
+}
+
 export default idukay;
