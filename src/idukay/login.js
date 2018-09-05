@@ -8,7 +8,7 @@ const createPost =  (data, callback) => {
     email = popUp.document.getElementById("email").value;
     password = popUp.document.getElementById("password").value;
 
-    let response = await fetch('http://dev.idukay.net/login', {
+    let response = await fetch('https://www.idukay.net/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
