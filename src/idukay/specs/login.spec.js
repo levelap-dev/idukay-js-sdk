@@ -1,23 +1,16 @@
-import idukay from 'idukay/login';
-import {createPost} from 'idukay/login';
+import idukay,  {createPost, popupTopLeftPosition} from 'idukay/login';
 import 'jest-localstorage-mock';
 
-let write, close, getElementById, addEventListener, removeItem;
-
-const mockEventListener = {
-  addEventListener: jest.fn()
-};
+let write, close, getElementById;
 
 describe('When login', () => {
   beforeEach(() => {
     write = jest.fn();
     close = jest.fn();
-    addEventListener = mockEventListener;
-
-    removeItem = jest.fn();
-
     getElementById = jest.fn(() => {
-      return addEventListener
+      return {
+        addEventListener: jest.fn()
+      }
     });
 
     spyOn(window, 'open').and.returnValue({document: {write, getElementById}, close});
@@ -41,6 +34,22 @@ describe('When login', () => {
     it('should call localStorage.removeItem', () => {
       idukay.login({}, jest.fn);
       expect(localStorage.removeItem).toHaveBeenLastCalledWith('idukaysdk/token');
+    });
+
+    it('should calculate the popup position by calling popupTopLeftPosition (single screen)', () => {
+      window.innerWidth = 150;
+      window.innerHeight = 100;
+      const response = popupTopLeftPosition(100, 50);
+      expect(response).toEqual({top: 25, left: 25});
+    });
+
+    it('should calculate the popup position by calling popupTopLeftPosition (dual screen)', () => {
+      window.screenLeft = 150;
+      window.innerWidth = 150;
+      window.innerHeight = 100;
+      const response = popupTopLeftPosition(100, 50);
+      const totalScreenPosition = 25 + 150;
+      expect(response).toEqual({top: 25, left: totalScreenPosition});
     });
   });
 
