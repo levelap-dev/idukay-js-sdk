@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/eslint src; ./node_modules/.bin/jest",
     "testw": "./node_modules/.bin/jest --watch",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib; browserify ./lib/index.js -o ./lib/idukay.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jest": "^21.17.0",
     "fetch-mock": "^6.5.1",
-    "jest": "^23.4.1",
+    "jest": "21.2.1",
     "jest-fetch-mock": "^1.6.5",
     "jest-localstorage-mock": "^2.2.0",
     "jsdom": "^11.11.0"
