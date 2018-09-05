@@ -1,12 +1,12 @@
 {
   "name": "idukay-js-sdk",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Used to integrate apps with Idukay",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/eslint src; ./node_modules/.bin/jest",
     "testw": "./node_modules/.bin/jest --watch",
-    "build": "babel src -d lib; browserify ./lib/index.js -o ./lib/idukay.js"
+    "build": "babel src -d lib --ignore spec.js; browserify ./lib/index.js -o ./lib/idukay.js"
   },
   "repository": {
     "type": "git",
