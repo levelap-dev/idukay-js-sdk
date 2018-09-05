@@ -185,11 +185,6 @@ const login = (data, callback) => {
         margin: 5px 0 -20px -20px;
         width: 510px;
       }
-
-      .disabled {
-        pointer-events: none;
-        opacity: 0.65;
-      }
     </style>
   </head>
   <body>
@@ -214,9 +209,6 @@ const login = (data, callback) => {
       </div>
   </body>
   </html>`;
-
-
-  
 
   const popupWidth = 520;
   const popupHeigth = 360;

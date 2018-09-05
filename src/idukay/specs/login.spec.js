@@ -1,22 +1,16 @@
 import idukay,  {createPost, popupTopLeftPosition} from 'idukay/login';
 import 'jest-localstorage-mock';
 
-let write, close, getElementById, addEventListener, removeItem;
-
-const mockEventListener = {
-  addEventListener: jest.fn()
-};
+let write, close, getElementById;
 
 describe('When login', () => {
   beforeEach(() => {
     write = jest.fn();
     close = jest.fn();
-    addEventListener = mockEventListener;
-
-    removeItem = jest.fn();
-
     getElementById = jest.fn(() => {
-      return addEventListener
+      return {
+        addEventListener: jest.fn()
+      }
     });
 
     spyOn(window, 'open').and.returnValue({document: {write, getElementById}, close});
